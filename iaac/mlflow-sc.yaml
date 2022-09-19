@@ -1,0 +1,11 @@
+apiVersion: v1 
+kind: Secret
+data: 
+  MLFLOW_ARTIFACT_ROOT: czM6Ly9tbGZsb3c= #s3://mlflow 
+  AWS_ACCESS_KEY_ID: YWRtaW4= #admin 
+  AWS_SECRET_ACCESS_KEY: YWRtaW4xMjM= #admin123 
+metadata: 
+  name: mlflow-sc
+  labels: 
+    kubedirector.hpe.com/secretType: mlflow 
+type: Opaque
