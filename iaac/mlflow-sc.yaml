@@ -5,7 +5,7 @@ data:
   AWS_ACCESS_KEY_ID: YWRtaW4= #admin 
   AWS_SECRET_ACCESS_KEY: YWRtaW4xMjM= #admin123 
 metadata: 
-  name: mlflow-sc
+  name: mlflow-sc-2
   labels: 
     kubedirector.hpe.com/secretType: mlflow 
 type: Opaque
