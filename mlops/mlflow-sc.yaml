@@ -8,4 +8,5 @@ metadata:
   name: mlflow-sc
   labels: 
     kubedirector.hpe.com/secretType: mlflow 
+    argocd.argoproj.io/hook: PreSync
 type: Opaque
