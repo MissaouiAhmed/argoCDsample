@@ -3,7 +3,7 @@ kind: KubeDirectorApp
 metadata:
   labels:
     kubedirector.hpe.com/AIML_category: Notebook
-  name: kd-rstudio-custom-kd
+  name: kd-rstudio
 spec:
   capabilities: []
   config:
@@ -14,11 +14,11 @@ spec:
     selectedRoles:
     - controller 
   configSchemaVersion: 8
-  distroID: kd-rstudio-custom-kd
+  distroID: kd-rstudio
   label:
-    description: rstudio-custom-kd app
-    name: rstudio-custom-kd
-  logoURL: https://www.ambient-it.net/wp-content/uploads/2020/09/logo-apache-rstudio-custom-kd-200x175-1.png
+    description: rstudio app
+    name: rstudio
+  logoURL: https://www.ambient-it.net/wp-content/uploads/2020/09/logo-apache-rstudio-200x175-1.png
   roles:
   - cardinality: 1+
     configPackage:
