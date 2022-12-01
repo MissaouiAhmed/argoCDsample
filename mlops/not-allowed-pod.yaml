@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: opa-disallowed-2
+  namespace: mlops
+spec:
+  containers:
+    - name: opa
+      image: openpolicyagent/opa:latest
+      args:
+        - "run"
+        - "--server"
+        - "--addr=localhost:8080"
+      resources:
+      requests:
+        memory: "12Mi"
+        cpu: "2"
+      limits:
+        memory: "12Mi"
+        cpu: "2"
