@@ -3,7 +3,7 @@ kind: KubeDirectorApp
 metadata:
   labels:
     kubedirector.hpe.com/AIML_category: Notebook
-  name: kd-nifi
+  name: kd-rstudio-custom-kd
 spec:
   capabilities: []
   config:
@@ -14,11 +14,11 @@ spec:
     selectedRoles:
     - controller 
   configSchemaVersion: 8
-  distroID: kd-nifi
+  distroID: kd-rstudio-custom-kd
   label:
-    description: nifi app
-    name: nifi
-  logoURL: https://www.ambient-it.net/wp-content/uploads/2020/09/logo-apache-nifi-200x175-1.png
+    description: rstudio-custom-kd app
+    name: rstudio-custom-kd
+  logoURL: https://www.ambient-it.net/wp-content/uploads/2020/09/logo-apache-rstudio-custom-kd-200x175-1.png
   roles:
   - cardinality: 1+
     configPackage:
@@ -29,7 +29,7 @@ spec:
     - addnodes
     - delnodes
     id: controller 
-    imageRepoTag: dockeridam/kdninfi:latest
+    imageRepoTag: dockeridam/kdrstudio:latest
     minResources:
       cpu: '2'
       memory: 10Mi
