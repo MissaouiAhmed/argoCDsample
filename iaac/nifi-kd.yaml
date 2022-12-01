@@ -41,7 +41,7 @@ spec:
       hasAuthToken: false
       isDashboard: true
       path: /nifi
-      port: 8080
+      port: 44047
       urlScheme: http
     id: http
     label:
