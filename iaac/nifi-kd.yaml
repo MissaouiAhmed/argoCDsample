@@ -22,7 +22,8 @@ spec:
   roles:
   - cardinality: 1+
     configPackage:
-      packageURL: https://github.com/MissaouiAhmed/hpe-kd-config/releases/download/refs%2Fheads%2Fmain/appconfig.tgz
+      packageURL: file:///opt/configscript/appconfig.tgz
+      useNewSetupLayout: true
     eventList:
     - configure
     - addnodes
