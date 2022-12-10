@@ -6,18 +6,11 @@ metadata:
   name: kd-rstudio-custom
 spec:
   capabilities: []
-  config:
-    roleServices:
-    - roleID: controller
-      serviceIDs:
-      - http
-    selectedRoles:
-    - controller 
   configSchemaVersion: 8
   distroID: kd-rstudio
   label:
     description: rstudio app
-    name: rstudio
+    name: kd-rstudio-custom
   logoURL: https://www.ambient-it.net/wp-content/uploads/2020/09/logo-apache-rstudio-200x175-1.png
   roles:
   - cardinality: 1+
@@ -28,14 +21,13 @@ spec:
     - configure
     - addnodes
     - delnodes
-    id: controller 
+    id: node
     imageRepoTag: dockeridam/kdrstudio:latest
     minResources:
       cpu: '2'
       memory: 10Mi
     persistDirs:
     - /home
-    - /data
   services:
   - endpoint:
       hasAuthToken: false
