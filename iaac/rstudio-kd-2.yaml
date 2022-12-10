@@ -18,7 +18,7 @@ spec:
   label:
     description: rstudio app
     name: kd-rstudio-custom
-  logoURL: https://www.ambient-it.net/wp-content/uploads/2020/09/logo-apache-rstudio-200x175-1.png
+  logoURL: https://raw.githubusercontent.com/MissaouiAhmed/hpe-kd-image/81e85aaadc7c34035ff160dd61f004a3f61e95dd/rstudio.png
   roles:
   - cardinality: 1+
     configPackage:
