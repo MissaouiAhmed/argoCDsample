@@ -7,6 +7,9 @@ metadata:
 spec:
   capabilities: []
   config:
+    roleServices:
+    - roleID: node
+      serviceIDs: []
     selectedRoles:
     - node
   configSchemaVersion: 8
@@ -24,7 +27,7 @@ spec:
     - configure
     - addnodes
     - delnodes
-    id: node 
+    id: controller 
     imageRepoTag: dockeridam/kdrstudio:latest
     minResources:
       cpu: '2'
