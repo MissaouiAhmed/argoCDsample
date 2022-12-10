@@ -1,0 +1,50 @@
+apiVersion: kubedirector.hpe.com/v1beta1
+kind: KubeDirectorApp
+metadata:
+  labels:
+    kubedirector.hpe.com/AIML_category: Notebook
+  name: kd-rstudio
+spec:
+  capabilities: []
+  config:
+    roleServices:
+    - roleID: controller
+      serviceIDs:
+      - http
+    selectedRoles:
+    - controller 
+  configSchemaVersion: 8
+  distroID: kd-rstudio
+  label:
+    description: rstudio app
+    name: rstudio
+  logoURL: https://www.ambient-it.net/wp-content/uploads/2020/09/logo-apache-rstudio-200x175-1.png
+  roles:
+  - cardinality: 1+
+    configPackage:
+      packageURL: file:///opt/configscript/appconfig.tgz
+      useNewSetupLayout: true
+    eventList:
+    - configure
+    - addnodes
+    - delnodes
+    id: controller 
+    imageRepoTag: dockeridam/kdrstudio:latest
+    minResources:
+      cpu: '2'
+      memory: 10Mi
+    persistDirs:
+    - /home
+    - /data
+  services:
+  - endpoint:
+      hasAuthToken: false
+      isDashboard: true
+      path: /
+      port: 8787
+      urlScheme: http
+    id: http
+    label:
+      name: http
+  systemdRequired: true
+  version: '1'
