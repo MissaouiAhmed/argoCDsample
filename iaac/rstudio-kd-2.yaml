@@ -6,6 +6,9 @@ metadata:
   name: kd-rstudio-custom
 spec:
   capabilities: []
+  config:
+    selectedRoles:
+    - node
   configSchemaVersion: 8
   distroID: kd-rstudio
   label:
@@ -21,13 +24,14 @@ spec:
     - configure
     - addnodes
     - delnodes
-    id: node
+    id: node 
     imageRepoTag: dockeridam/kdrstudio:latest
     minResources:
       cpu: '2'
       memory: 10Mi
     persistDirs:
     - /home
+    - /data
   services:
   - endpoint:
       hasAuthToken: false
