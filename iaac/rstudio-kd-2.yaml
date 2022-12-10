@@ -27,7 +27,7 @@ spec:
     - configure
     - addnodes
     - delnodes
-    id: controller 
+    id: node 
     imageRepoTag: dockeridam/kdrstudio:latest
     minResources:
       cpu: '2'
