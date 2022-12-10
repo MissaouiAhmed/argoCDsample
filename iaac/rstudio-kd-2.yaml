@@ -9,9 +9,10 @@ spec:
   config:
     roleServices:
     - roleID: node
-      serviceIDs: []
+      serviceIDs:
+      - http
     selectedRoles:
-    - node
+    - node 
   configSchemaVersion: 8
   distroID: kd-rstudio
   label:
@@ -45,5 +46,5 @@ spec:
     id: http
     label:
       name: http
-  systemdRequired: true
+  systemdRequired: false
   version: '1'
