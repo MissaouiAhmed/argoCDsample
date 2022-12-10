@@ -3,7 +3,7 @@ kind: KubeDirectorApp
 metadata:
   labels:
     kubedirector.hpe.com/AIML_category: Notebook
-  name: kd-rstudio
+  name: kd-rstudio-custom
 spec:
   capabilities: []
   config:
