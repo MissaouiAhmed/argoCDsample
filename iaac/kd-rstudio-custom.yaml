@@ -6,11 +6,11 @@ spec:
   capabilities: []
   config:
     roleServices:
-    - roleID: node
+    - roleID: controller
       serviceIDs:
       - http
     selectedRoles:
-    - node 
+    - controller 
   configSchemaVersion: 8
   distroID: kd-rstudio
   label:
