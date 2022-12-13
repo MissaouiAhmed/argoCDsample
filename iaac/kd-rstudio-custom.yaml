@@ -2,7 +2,7 @@ apiVersion: kubedirector.hpe.com/v1beta1
 kind: KubeDirectorApp
 metadata:
   labels:
-    kubedirector.hpe.com/AIML_category: Notebook
+    kubedirector.hpe.com/AIML_category: Deployment
   name: kd-rstudio-custom
 spec:
   capabilities: []
