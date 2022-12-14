@@ -1,0 +1,40 @@
+apiVersion: kubedirector.hpe.com/v1beta1
+kind: KubeDirectorApp
+metadata:
+  name: kd-demo-noconf
+spec:
+  capabilities: []
+  config:
+    roleServices:
+    - roleID: rstudio
+      serviceIDs:
+      - http
+    selectedRoles:
+    - rstudio
+  configSchemaVersion: 8
+  distroID: kd-demonoconf
+  label:
+    description: demonoconf
+    name: demo
+  logoURL: https://github.com/MissaouiAhmed/hpe-kd-image/blob/1134e875b315bd3f74439a7bda7d405fbf741828/rstudio.png
+  roles:
+  - cardinality: 1+
+    id: rstudio
+    imageRepoTag: dockeridam/kdrstudio
+    minResources:
+      cpu: '2'
+      memory: 10Mi
+    persistDirs:
+    - /home
+  services:
+  - endpoint:
+      hasAuthToken: false
+      isDashboard: true
+      path: /
+      port: 8787
+      urlScheme: http
+    id: http
+    label:
+      name: http
+  systemdRequired: false
+  version: '1'
