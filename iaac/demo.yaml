@@ -1,0 +1,46 @@
+apiVersion: kubedirector.hpe.com/v1beta1
+kind: KubeDirectorApp
+metadata:
+  name: kd-scch
+spec:
+  capabilities: []
+  config:
+    roleServices:
+    - roleID: scch
+      serviceIDs:
+      - http
+    selectedRoles:
+    - scch
+  configSchemaVersion: 8
+  distroID: kd-scch
+  label:
+    description: scch
+    name: scch
+  logoURL: https://github.com/MissaouiAhmed/hpe-kd-image/blob/1134e875b315bd3f74439a7bda7d405fbf741828/rstudio.png
+  roles:
+  - cardinality: 1+
+    configPackage:
+      packageURL: file:///opt/configscript/appconfig.tgz
+    eventList:
+    - configure
+    - addnodes
+    - delnodes
+    id: scch
+    imageRepoTag: dockeridam/kdrstudio
+    minResources:
+      cpu: '2'
+      memory: 10Mi
+    persistDirs:
+    - /data
+  services:
+  - endpoint:
+      hasAuthToken: false
+      isDashboard: true
+      path: /
+      port: 7878
+      urlScheme: http
+    id: http
+    label:
+      name: http
+  systemdRequired: false
+  version: '1'
