@@ -6,12 +6,12 @@ spec:
   capabilities: []
   config:
     roleServices:
-    - roleID: controller
+    - roleID: node
       serviceIDs:
       - http
     selectedRoles:
-    - controller 
-  configSchemaVersion: 8
+    - node 
+  configSchemaVersion: 7
   distroID: kd-rstudio
   label:
     description: rstudio app
@@ -20,13 +20,9 @@ spec:
   roles:
   - cardinality: 1+
     configPackage:
-      packageURL: file:///opt/configscript/appconfig.tgz
+      packageURL: https://github.com/MissaouiAhmed/hpe-kd-config/releases/download/refs%2Fheads%2Fmain/appconfig.tgz
       useNewSetupLayout: false
-    eventList:
-    - configure
-    - addnodes
-    - delnodes
-    id: controller 
+    id: node 
     imageRepoTag: dockeridam/kdrstudio:latest
     minResources:
       cpu: '2'
