@@ -1,0 +1,39 @@
+apiVersion: kubedirector.hpe.com/v1beta1
+kind: KubeDirectorApp
+metadata:
+  labels:
+    kubedirector.hpe.com/AIML_category: Notebook
+  name: 'rstudio'
+spec:
+  capabilities: []
+  config:
+    roleServices:
+    - roleID: controller
+      serviceIDs:
+      - rstudio
+    selectedRoles:
+    - controller
+  configSchemaVersion: 8
+  distroID: '1'
+  label:
+    description: rstudio
+    name: rstudio
+  logoURL: https://upload.wikimedia.org/wikipedia/fr/4/4e/RStudio_Logo.png
+  roles:
+  - cardinality: 1+
+    id: controller
+    imageRepoTag: 'rocker/rstudio'
+    persistDirs:
+    - /bd-fs-mnt
+  services:
+  - endpoint:
+      hasAuthToken: false
+      isDashboard: true
+      path: /
+      port: 8787
+      urlScheme: http
+    id: rstudio
+    label:
+      name: rstudio
+  systemdRequired: true
+  version: '1'
