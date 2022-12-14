@@ -15,7 +15,7 @@ spec:
   distroID: kd-demonoconf
   label:
     description: demonoconf
-    name: demo
+    name: demonoconf
   logoURL: https://github.com/MissaouiAhmed/hpe-kd-image/blob/1134e875b315bd3f74439a7bda7d405fbf741828/rstudio.png
   roles:
   - cardinality: 1+
