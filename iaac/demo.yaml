@@ -37,7 +37,7 @@ spec:
       hasAuthToken: false
       isDashboard: true
       path: /
-      port: 7878
+      port: 8787
       urlScheme: http
     id: http
     label:
