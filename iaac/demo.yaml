@@ -1,7 +1,7 @@
 apiVersion: kubedirector.hpe.com/v1beta1
 kind: KubeDirectorApp
 metadata:
-  name: kd-demolocal
+  name: kd-demo
 spec:
   capabilities: []
   config:
@@ -12,10 +12,10 @@ spec:
     selectedRoles:
     - rstudio
   configSchemaVersion: 8
-  distroID: kd-demolocal
+  distroID: kd-demo
   label:
-    description: test
-    name: test
+    description: demo
+    name: demo
   logoURL: https://github.com/MissaouiAhmed/hpe-kd-image/blob/1134e875b315bd3f74439a7bda7d405fbf741828/rstudio.png
   roles:
   - cardinality: 1+
