@@ -27,7 +27,7 @@ spec:
       cpu: '2'
       memory: 10Mi
     persistDirs:
-    - /bd-fs-mnt
+    - /home
   services:
   - endpoint:
       hasAuthToken: false
