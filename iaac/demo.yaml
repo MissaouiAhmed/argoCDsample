@@ -21,6 +21,7 @@ spec:
   - cardinality: 1+
     configPackage:
       packageURL: file:///opt/configscripts/appconfig.tgz
+      useNewSetupLayout: true     
     id: rstudio
     imageRepoTag: dockeridam/kdrstudio
     minResources:
