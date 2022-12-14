@@ -23,6 +23,8 @@ spec:
   - cardinality: 1+
     id: controller
     imageRepoTag: 'rocker/rstudio'
+    persistDirs:
+    - /home
   services:
   - endpoint:
       hasAuthToken: false
