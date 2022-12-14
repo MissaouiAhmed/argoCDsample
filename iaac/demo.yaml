@@ -21,17 +21,13 @@ spec:
   - cardinality: 1+
     configPackage:
       packageURL: file:///opt/configscripts/appconfig.tgz
-    eventList:
-    - configure
-    - addnodes
-    - delnodes
     id: rstudio
     imageRepoTag: dockeridam/kdrstudio
     minResources:
       cpu: '2'
       memory: 10Mi
     persistDirs:
-    - /data
+    - /bd-fs-mnt
   services:
   - endpoint:
       hasAuthToken: false
