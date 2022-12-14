@@ -1,7 +1,7 @@
 apiVersion: kubedirector.hpe.com/v1beta1
 kind: KubeDirectorApp
 metadata:
-  name: kd-rstudio-custom
+  name: kd-rstudio-custom-node
 spec:
   capabilities: []
   config:
@@ -12,7 +12,7 @@ spec:
     selectedRoles:
     - node 
   configSchemaVersion: 8
-  distroID: kd-rstudio
+  distroID: kd-rstudio-custom-node
   label:
     description: rstudio app
     name: kd-rstudio-custom
