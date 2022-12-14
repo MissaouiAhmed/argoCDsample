@@ -1,31 +1,31 @@
 apiVersion: kubedirector.hpe.com/v1beta1
 kind: KubeDirectorApp
 metadata:
-  name: kd-scch
+  name: kd-demolocal
 spec:
   capabilities: []
   config:
     roleServices:
-    - roleID: scch
+    - roleID: rstudio
       serviceIDs:
       - http
     selectedRoles:
-    - scch
+    - rstudio
   configSchemaVersion: 8
-  distroID: kd-scch
+  distroID: kd-demolocal
   label:
-    description: scch
-    name: scch
+    description: test
+    name: test
   logoURL: https://github.com/MissaouiAhmed/hpe-kd-image/blob/1134e875b315bd3f74439a7bda7d405fbf741828/rstudio.png
   roles:
   - cardinality: 1+
     configPackage:
-      packageURL: file:///opt/configscript/appconfig.tgz
+      packageURL: file:///opt/configscripts/appconfig.tgz
     eventList:
     - configure
     - addnodes
     - delnodes
-    id: scch
+    id: rstudio
     imageRepoTag: dockeridam/kdrstudio
     minResources:
       cpu: '2'
@@ -37,7 +37,7 @@ spec:
       hasAuthToken: false
       isDashboard: true
       path: /
-      port: 8787
+      port: 7878
       urlScheme: http
     id: http
     label:
