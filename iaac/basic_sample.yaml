@@ -3,7 +3,7 @@ kind: KubeDirectorApp
 metadata:
   labels:
     kubedirector.hpe.com/AIML_category: Notebook
-  name: 'rstudio'
+  name: 'basic_rstudio'
 spec:
   capabilities: []
   config:
@@ -16,8 +16,8 @@ spec:
   configSchemaVersion: 8
   distroID: '1'
   label:
-    description: rstudio
-    name: rstudio
+    description: basic_rstudio
+    name: basic_rstudio
   logoURL: https://upload.wikimedia.org/wikipedia/fr/4/4e/RStudio_Logo.png
   roles:
   - cardinality: 1+
